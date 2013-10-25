@@ -55,9 +55,9 @@ namespace AiModJumpDetector
                     double speed = dis / timeBet;
                     if (prevSpeed > -1)
                     {
-                        if (speed > prevSpeed * 1.5) // sensitivity for what counts as a jump here
+                        if (speed > prevSpeed * Properties.Settings.Default.Sensitivity) // sensitivity for what counts as a jump here
                         {
-                            Reports.Add(new AiReportTwoObjects(prev, h, null, Severity.Info, "Jump detected", 0));
+                            Reports.Add(new AiReportTwoObjects(prev, h, null, Severity.Info, Decimal.Round((decimal)(speed/prevSpeed),2)+"x Jump detected", 0));
                             count += 1;
                         }                       
                     }
