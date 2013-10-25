@@ -44,6 +44,12 @@ namespace AiModJumpDetector
                         continue;
                     }
                     int timeBet = h.StartTime - prev.EndTime;
+                    if (timeBet > 1500) // reset on breaks of 1.5s or more
+                    {
+                        prev = h;
+                        prevSpeed = -1;
+                        continue;
+                    }
                     double disX = (Math.Pow(h.PositionAtTime(h.StartTime).X - prev.EndPosition.X, 2.0));
                     double disY = (Math.Pow(h.PositionAtTime(h.StartTime).Y - prev.EndPosition.Y, 2.0));
                     double dis = (Math.Sqrt(disX + disY));

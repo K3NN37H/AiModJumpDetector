@@ -14,5 +14,5 @@ using osu.GameModes.Edit.AiMod;
 //THIS LINE IS IMPORTANT! You need to include your assembly name (which should match the filename of your dll) and the Ruleset you wish to load.
 [assembly: AiModRulesetAttribute("AiModJumpDetector", "AiModJumpDetector.AiModJumpDetector")]
 
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyVersion("1.0.2.0")]
+[assembly: AssemblyFileVersion("1.0.2.0")]
